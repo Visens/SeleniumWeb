@@ -38,7 +38,7 @@ public class positiveTests {
 		driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Владимиров Владимир");
 		driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79279348516");
 		driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-		driver.findElement(By.cssSelector("button-button")).click();
+		driver.findElement(By.cssSelector("button.button")).click();
 		String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
 		assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text);
 		}
@@ -47,9 +47,8 @@ public class positiveTests {
 		driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Владимиров-Савицкий Владимир");
 		driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79279348516");
 		driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-		driver.findElement(By.cssSelector("button-button")).click();
+		driver.findElement(By.cssSelector("button.button")).click();
 		String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
 		assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text);
-	}
 	}
 }
